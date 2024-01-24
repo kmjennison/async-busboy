@@ -75,7 +75,6 @@ module.exports = function (request, options) {
     function cleanup() {
       bb.removeListener('field', onField);
       bb.removeListener('file', customOnFile || onFile);
-      bb.removeListener('close', cleanup);
       bb.removeListener('end', cleanup);
       bb.removeListener('error', onEnd);
       bb.removeListener('partsLimit', onEnd);
